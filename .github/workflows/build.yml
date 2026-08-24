@@ -3,7 +3,7 @@ name: Build Gradle Plugin
 on:
   push:
     branches:
-      - main   # 每次推送到 main 分支时触发
+      - main
 
 jobs:
   build:
@@ -13,10 +13,13 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up JDK
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           java-version: '17'
           distribution: 'temurin'
+
+      - name: Grant execute permission for Gradle
+        run: chmod +x gradlew
 
       - name: Build with Gradle
         run: ./gradlew build
