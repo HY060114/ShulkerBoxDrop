@@ -1,0 +1,8 @@
+# 挖掘潜影盒数量阈值
+shulkerbox-break-threshold: 10
+#白名单模式开关admin
+whitelist-mode: false
+#白名单物品id
+allowed-items:
+#禁用复制权限的玩家UUID列表
+disabled-players: []

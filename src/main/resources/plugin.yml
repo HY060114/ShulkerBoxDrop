@@ -1,0 +1,33 @@
+name: ShulkerBoxDrop
+version: '${version}'
+main: enduraut.shulkerboxdrop.ShulkerBoxDrop
+api-version: '1.20'
+
+commands:
+  shulkerboxdrop:
+    description: ShulkerBoxDrop 主命令
+    usage: /<command> <plugin|player|item|whitelist|threshold|status|reload> ...
+    aliases: [sbd]
+
+permissions:
+  shulkerboxdrop.plugin:
+    description: 允许开关插件
+    default: op
+  shulkerboxdrop.player:
+    description: 允许禁用/恢复玩家的复制权限
+    default: op
+  shulkerboxdrop.item:
+    description: 允许添加/移除白名单物品
+    default: op
+  shulkerboxdrop.whitelist:
+    description: 允许开关白名单模式
+    default: op
+  shulkerboxdrop.threshold:
+    description: 允许设置挖掘阈值
+    default: op
+  shulkerboxdrop.reload:
+    description: 允许重载配置文件
+    default: op
+  shulkerboxdrop.status:
+    description: 允许查看插件状态
+    default: true
